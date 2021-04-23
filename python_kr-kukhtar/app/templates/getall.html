@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Договори
+{% endblock %}
+
+{%block content%}
+<h1>Договори</h1>
+
+      {%for i in range(0, len)%}
+  	<h4>Agreement № {{args[i].id}}</h4>
+    <li></li>
+    <li>код - {{args[i].code}}</li>
+	<li>ім'я - {{args[i].name}}</li>
+    <li>ціна - {{args[i].price}}</li>
+    <li>тип - {{args[i].types}}</li>
+
+
+{%endfor%}
+
+
+{%endblock%}

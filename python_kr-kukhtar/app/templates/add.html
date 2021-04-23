@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Додати договір
+{% endblock %}
+
+{%block content%}
+<h1>Додати договір</h1>
+<form method="POST" action="{{ url_for('form') }}">
+
+	{{form.csrf_token}}
+	{{form.code.label}}{{form.code(size=20)}}
+	<br>
+	{{form.name.label}}{{form.name(size=20)}}
+	<br>
+	{{form.deadline.label}}{{form.deadline(size=20)}}
+	<br>
+	{{form.price.label}}{{form.price(size=20)}}
+	<br>
+	{{form.types.label}}{{form.types()}}
+
+	<input type="submit" value="Send">
+
+</form>
+
+{%endblock%}

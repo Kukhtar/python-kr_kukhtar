@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add agreement 
+{% endblock %}
+
+{%block content%}
+<h1>add agreement</h1>
+ <form method="POST" action="{{ url_for('ceate') }}">
+
+	{{form.csrf_token}}
+	{{form.name.label}}{{form.name(size=20)}}
+	{{form.email.label}}{{form.email(size=20)}}
+	{{form.message.label}}{{form.message(size=20)}}
+
+	<input type="submit" value="Send">
+
+</form>
+
+
+{%endblock%}
